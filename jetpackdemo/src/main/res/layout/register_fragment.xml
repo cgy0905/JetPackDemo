@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--需要的viewModel,通过mBinding.vm=mViewMode注入-->
+        <variable
+            name="model"
+            type="com.example.jetpackdemo.viewmodel.RegisterModel" />
+
+        <variable
+            name="activity"
+            type="androidx.fragment.app.FragmentActivity" />
+        <import type="android.view.View"/>
+    </data>
+
+</layout>
