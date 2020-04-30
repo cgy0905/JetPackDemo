@@ -17,7 +17,7 @@ interface FavouriteShoeDao {
     fun findFavouriteShoesByUserId(userId : String) : LiveData<List<FavouriteShoe>>
 
     //查询单个FavouriteShoe
-    @Query("SELECT * FROM fav_shoe WHERE user_id = :userId AND shoe_id = shoe_id")
+    @Query("SELECT * FROM fav_shoe WHERE user_id = :userId AND shoe_id = :shoeId")
     fun findFavouriteShoeByUserIdAndShoeId(userId: Long, shoeId : Long) : LiveData<FavouriteShoe?>
 
     //插入单个FavouriteShoe

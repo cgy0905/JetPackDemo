@@ -1,4 +1,4 @@
-package com.example.jetpackdemo.ui
+package com.example.jetpackdemo.ui.fragment.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
-import com.example.jetpackdemo.MainActivity
+import com.example.jetpackdemo.ui.activity.MainActivity
 import com.example.jetpackdemo.R
 import com.example.jetpackdemo.common.BaseConstant
 import com.example.jetpackdemo.databinding.LoginFragmentBinding
@@ -39,7 +38,7 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.login_fragment, container, false)
+        //return inflater.inflate(R.layout.login_fragment, container, false)
         // TODO 研究DataBindComponent
         // 1.Binding生成的方式一
         val binding: LoginFragmentBinding =

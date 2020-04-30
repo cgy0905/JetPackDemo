@@ -1,4 +1,4 @@
-package com.example.jetpackdemo.ui
+package com.example.jetpackdemo.ui.fragment.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.jetpackdemo.R
 import com.example.jetpackdemo.common.BaseConstant
+import com.example.jetpackdemo.ui.WelcomeFragmentDirections
 import com.example.jetpackdemo.utils.AppPrefsUtils
 
 /**
@@ -51,7 +52,13 @@ class WelcomeFragment : Fragment(){
             //Navigation传递参数
             val bundle = Bundle()
             bundle.putString(BaseConstant.ARGS_NAME, name)
-            //findNavController().navigate(R.id.login, bundle, navOption)
+            findNavController().navigate(R.id.login, bundle, navOption)
+        }
+        btnRegister.setOnClickListener {
+            //利用SafeArgs传递参数
+            val action = WelcomeFragmentDirections.actionWelcomeToRegister()
+                .setEMAIL("1020110023@qq.com")
+            findNavController().navigate(action)
         }
 
     }

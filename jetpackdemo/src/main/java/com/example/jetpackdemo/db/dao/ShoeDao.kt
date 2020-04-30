@@ -27,6 +27,7 @@ interface ShoeDao {
     /**
      * 通过品牌查询鞋子
      */
+    @Query("SELECT * FROM shoe WHERE shoe_brand IN (:brand)")
     fun findShoesByBrandLD(brand : Array<String>) : DataSource.Factory<Int, Shoe>
 
     // 根据收藏结合 查询用户喜欢的鞋的集合

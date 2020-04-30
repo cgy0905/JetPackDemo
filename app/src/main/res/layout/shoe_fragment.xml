@@ -54,7 +54,8 @@
 			app:backgroundTint="@color/colorPrimary"
 			app:tint="#ffffff"
 			app:pressedTranslationZ="20dp"
-			app:rippleColor="#1f000000" />
+			app:rippleColor="#1f000000"
+			tools:ignore="MissingConstraints" />
 
 		<com.google.android.material.floatingactionbutton.FloatingActionButton
 			android:id="@+id/fab_adidas"
@@ -71,7 +72,8 @@
 			app:backgroundTint="@color/colorPrimary"
 			app:tint="#ffffff"
 			app:pressedTranslationZ="20dp"
-			app:rippleColor="#1f000000" />
+			app:rippleColor="#1f000000"
+			tools:ignore="MissingConstraints" />
 
 		<com.google.android.material.floatingactionbutton.FloatingActionButton
 			android:id="@+id/fab_other"
@@ -89,7 +91,8 @@
 			app:backgroundTint="@color/colorPrimary"
 			app:tint="#ffffff"
 			app:pressedTranslationZ="20dp"
-			app:rippleColor="#1f000000" />
+			app:rippleColor="#1f000000"
+			tools:ignore="MissingConstraints" />
 
 		<androidx.constraintlayout.widget.Group
 			android:id="@+id/gp_like"
