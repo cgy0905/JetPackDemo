@@ -7,9 +7,25 @@
 
     <fragment
         android:id="@+id/infoFragment"
-        android:name="ShoeFragment"
+        android:name="com.example.jetpackdemo.ui.fragment.main.ShoeFragment"
         android:label="fragment_info"
         tools:layout="@layout/shoe_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.example.jetpackdemo.ui.fragment.main.FavouriteFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/register_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/meFragment"
+        android:name="com.example.jetpackdemo.ui.fragment.main.MeFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/me_fragment">
 
     </fragment>
 
