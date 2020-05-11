@@ -1,18 +1,13 @@
 package com.joe.jetpackdemo.viewmodel
 
-import android.text.TextUtils
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.joe.jetpackdemo.db.dao.FavouriteShoeDao
 import com.joe.jetpackdemo.db.data.FavouriteShoe
 import com.joe.jetpackdemo.db.data.Shoe
 import com.joe.jetpackdemo.db.repository.FavouriteShoeRepository
 import com.joe.jetpackdemo.db.repository.ShoeRepository
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class DetailModel constructor(
     shoeRepository: ShoeRepository,

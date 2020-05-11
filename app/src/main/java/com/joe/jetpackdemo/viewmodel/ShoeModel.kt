@@ -1,12 +1,11 @@
 package com.joe.jetpackdemo.viewmodel
 
-import android.renderscript.Sampler
+
 import androidx.lifecycle.*
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.joe.jetpackdemo.common.createPagerList
 import com.joe.jetpackdemo.db.data.Shoe
-import com.joe.jetpackdemo.db.datasource.CustomPageDataSource
 import com.joe.jetpackdemo.db.datasource.CustomPageDataSourceFactory
 import com.joe.jetpackdemo.db.repository.ShoeRepository
 

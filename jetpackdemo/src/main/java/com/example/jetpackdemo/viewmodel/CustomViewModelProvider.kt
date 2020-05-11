@@ -8,6 +8,7 @@ import com.example.jetpackdemo.db.repository.ShoeRepository
 import com.example.jetpackdemo.db.repository.UserRepository
 import com.example.jetpackdemo.utils.AppPrefsUtils
 import com.example.jetpackdemo.viewmodel.factory.FavouriteModelFactory
+import com.example.jetpackdemo.viewmodel.factory.FavouriteShoeModelFactory
 import com.example.jetpackdemo.viewmodel.factory.LoginModelFactory
 import com.example.jetpackdemo.viewmodel.factory.RegisterModelFactory
 
@@ -32,5 +33,15 @@ object CustomViewModelProvider {
         val repository : ShoeRepository = RepositoryProvider.providerShoeRepository(context)
         val userId : Long = AppPrefsUtils.getLong(BaseConstant.SP_USER_ID)
         return FavouriteModelFactory(repository, userId)
+    }
+
+    /**
+     * @shoeId 鞋子的Id
+     * @userId 用户的Id
+     */
+    fun providerDetailModel(context: Context, shoeId : Long, userId : Long) : FavouriteShoeModelFactory {
+        val repository : ShoeRepository = RepositoryProvider.providerShoeRepository(context)
+        val favouriteShoeRepository : FavouriteShoeRepository = RepositoryProvider.providerFavouriteShoeRepository(context)
+        return FavouriteShoeModelFactory(repository, favouriteShoeRepository, shoeId, userId)
     }
 }
